@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <main class="main">
+
+  
+    <header class="main__header">
+      <div><img src="images/logo.png" alt="Logo recipe" ></div>
+      <button class="btn__new-recipe" onclick="newRecipe()">Nova receita</button>
+    </header>
+
+    <!--Mostruário das receitas-->
+    <div class="main__container"></div>
+    
+  </main>   
+
+    <!--Conteúdo das receitas-->
+    <div class="modal__content">
+      <div class="recipe__content" id="open"></div>
+    </div>
+   
+    <!--Adicionar nova receita-->
+    <div class="modal__container">
+      <div class="modal__add-recipe" >
+        <label for="name-recipe">Nome da receita</label>
+        <input type="text" class="input" id="name-recipe" required>
+        <label for="img-recipe">Imagem da receita(url)</label>
+        <input type="text" name="" class="input"  id="img-recipe" required>
+        <label for="ingredients">Ingredientes</label>
+        <input type="text" class="input"  id="ingredients" required>
+        <label for="instructions">Instruções</label>
+        <textarea name="" class="textarea"id="instructions" cols="30" rows="8" required></textarea>
+        <div class="btn__modal"> 
+          <button class="button btn-cancel"  onclick="cancelNewRecipe()">Cancelar</button>
+          <button class="button" id="btn-add" onclick="addNewRecipe()">Adicionar</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <!--Editando a receita-->
+    <div class="modal__container" id="modal-edit">
+      <div class="modal__edit-recipe"></div> 
+    </div>
+    
+  
+  <script src="script.js"></script>
+</body>
+</html>
