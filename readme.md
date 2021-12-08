@@ -1,5 +1,5 @@
 <p align="center"><img src="images/banner.gif"></p><br>
-<p>Ideia retirada do <a href="https://github.com/florinpop17/app-ideas"  target="">App ideas</a></p>
+<p>Ideia retirada do <a href="https://github.com/florinpop17/app-ideas"  target="_blank">App ideas</a></p>
 
 
 <p>O objetivo do aplicativo Receita é ajudar o usuário a gerenciar suas receitas favoritas.</p>
