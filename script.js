@@ -5,7 +5,7 @@ let modalContent = document.querySelector(".modal__content")
 let addRecipe = document.querySelector(".modal__add-recipe")
 let editRecipe = document.querySelector(".modal__edit-recipe")
 let editModal = document.querySelector("#modal-edit")
-
+let body = document.querySelector("body")
 
 
 let recipeAll = [
@@ -210,26 +210,29 @@ function contentOpenRecipe(i){
 function closeRecipe(){
     contentRecipe.style.display = "none"
     modalContent.style.display = "none"
+    body.style.overflow = "auto"
 }
 
 function newRecipe(){
     cleanFields()
     addRecipe.style.display = "flex"
     modalContainer.style.display = "flex"
-    
+    body.style.overflow = "hidden"
 }
 
 function cancelNewRecipe(){
     addRecipe.style.display = "none"
     modalContainer.style.display = "none"
+    body.style.overflow = "auto"
 }
+
 
 function openRecipe(i){
     
     contentOpenRecipe(i)
     contentRecipe.style.display = "flex"
     modalContent.style.display = "flex"
-    
+    body.style.overflow = "hidden"
 }
 
 
@@ -281,6 +284,7 @@ function editarRecipe(i){
     
     editRecipe.style.display = "flex"
     editModal.style.display = "flex"
+    
 }
 
 
