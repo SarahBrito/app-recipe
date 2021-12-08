@@ -156,6 +156,7 @@ function addNewRecipe(){
         
         addRecipe.style.display = "none"
         modalContainer.style.display = "none"
+        body.style.overflow = "auto"
 
         showRecipe(recipeStorage)
         // Alerta
@@ -290,17 +291,18 @@ function editarRecipe(i){
 
 function saveChangeRecipe(i){
     
-      recipeStorage[i].name = document.querySelector("#change-name-recipe").value
-      recipeStorage[i].img = document.querySelector("#change-img-recipe").value
-      recipeStorage[i].ingredients = document.querySelector("#change-ingredients").value
-      recipeStorage[i].instructions = document.querySelector("#change-instructions").value
-  
-      editRecipe.style.display = "none"
-      editModal.style.display = "none"
-  
-      contentOpenRecipe(i)
-      updateLocalStorage()
-      showRecipe(recipeStorage)
+    recipeStorage[i].name = document.querySelector("#change-name-recipe").value
+    recipeStorage[i].img = document.querySelector("#change-img-recipe").value
+    recipeStorage[i].ingredients = document.querySelector("#change-ingredients").value
+    recipeStorage[i].instructions = document.querySelector("#change-instructions").value
+
+    editRecipe.style.display = "none"
+    editModal.style.display = "none"
+   
+
+    contentOpenRecipe(i)
+    updateLocalStorage()
+    showRecipe(recipeStorage)
     
 }
 
