@@ -1,5 +1,5 @@
 <p align="center"><img src="images/banner.gif"></p><br>
-<p>Ideia retirada do <a href="https://github.com/florinpop17/app-ideas"  target="">App ideas</a></p>
+<p>Ideia retirada do <a href="https://github.com/florinpop17/app-ideas"  target="_blank">App ideas</a></p>
 
 
 <p>O objetivo do aplicativo Receita é ajudar o usuário a gerenciar suas receitas favoritas.</p>
@@ -7,10 +7,10 @@
 <br><br>
 
 <h1>☑️ Recursos</h1>
-    -[x] O usuário pode ver o mostruário de receitas <br>
-    -[x] O usuário pode adicionar uma nova receita <br>
-    -[x] O usuário pode editar uma receita <br>
-    -[x] O usuário pode deletar uma receita
+     O usuário pode ver o mostruário de receitas ✔️ <br>
+     O usuário pode adicionar uma nova receita ✔️<br>
+     O usuário pode editar uma receita ✔️<br>
+     O usuário pode deletar uma receita ✔️
 
 <br><br>
 
@@ -26,7 +26,7 @@
 <p align="center">Feito com ❤️ por Sara Brito</p>
 
 <br>
-+
+
 <div align="center">
  
   <a href="https://www.linkedin.com/in/sara-brito-49312a211/" target="_blank" ><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
