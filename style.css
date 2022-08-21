@@ -1,21 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 :root {
-    --dark-blue:  #020122;
-    --cream: #f2f3ae;
-    --orange: #ff521b;
+    --white: #fff;
+    --green: #3BB77E;
+    --light-green: #c5ead9;
+    --black: #131a1f;
+    --grey: #f7efef;
 }
 
-
-
-body {
-    background: #1b1b22;
+body{
+    background: var(--black);
 }
 
 button {
@@ -24,14 +25,14 @@ button {
 }
 
 .main {
-    background: #1b1b22;
+    background: var(--black);
     width: 100%;
     height: 100%;
     padding: 30px;
     
 }
 .main__header {
-    background: #64d85a;
+    background: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -43,9 +44,18 @@ button {
 }
 
 
+.main__header__title {
+    color: var(--black);
+}
+
+.main__header__title span  {
+    background: var(--grey);
+    padding: 4px 12px;
+}
+
 .btn__new-recipe {
-    background-color: #1b1b22;
-    color: #64d85a;
+    background-color: var(--green);
+    color: var(--blue);
     padding: 16px;
     width: 150px;
     border-radius: 6px;
@@ -53,13 +63,16 @@ button {
     cursor: pointer;
     box-shadow: 0 4px 4px 0 #00000033, 0 6px 20px 0 #00000030;
     margin: 4px auto;
+    font-weight: 700;
+    font-size: 16px;
 }
 
 
 /* ---------- Mostruário das receitas ----------*/
 
 .main__container {
-    background: #f4f4f5;
+    
+    background: linear-gradient(90deg, hsla(348, 88%, 66%, 1) 0%, hsla(36, 89%, 68%, 1) 100%);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -85,7 +98,7 @@ button {
 }
 
 .recipe-title {
-    color: #31a527;
+    color: var(--black);
     text-align: center;
     margin: 10px ;
     padding: 4px;
@@ -103,8 +116,8 @@ button {
 
 .btn-open {
     background: none;
-    border: 1px solid #31a527;
-    color: #31a527;
+    border: 1px solid var(--green);
+    color: var(--black);
     padding: 10px 24px;
     margin: 12px auto;
     border-radius: 4px;
@@ -112,14 +125,12 @@ button {
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
 
-
 .btn-open:hover {
     color: #f5f5f5;
-    box-shadow: 0 0 40px 40px #31a527 inset;
+    box-shadow: 0 0 40px 40px var(--green) inset;
     border: none;
     opacity: 0.9;
 }
-
 
 
  /* ---------- Conteúdo da receita---------- */
@@ -130,7 +141,7 @@ button {
     flex-direction: column;
     width: 60%;
     height: 650px;
-    background-color:#dddde4;
+    background: var(--grey);
     overflow: auto;
     padding: 48px;
     margin: 0 auto;
@@ -146,12 +157,13 @@ button {
     justify-content: space-between;
     text-align: center;
     width: 100%;
-    color: #1b1b22;
+    color: var(--black);
     text-transform: capitalize;
 }
 
+
 .recipe__content h2 {
-    color: #31a527;
+    color: var(--green);
 }
 
 .ingredients {
@@ -172,14 +184,20 @@ button {
     margin: 24px;
 }
 
-
-#close-recipe {
-    padding: 2px 6px;
-    border: none;
-    background: none;
-    cursor: pointer;
+.recipe__content ol li::marker, .recipe__content ul li::marker{
+    color: hsla(348, 88%, 66%, 1);
+    font-size: 24px;
+    font-weight: 500;
 }
 
+
+#close-recipe {
+    padding: 6px;
+    border: none;
+    background: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
 
 .actions {
     display: flex;
@@ -198,7 +216,7 @@ button {
 }
 
 .btn__edit {
-    border: 1px solid #31a527;
+    border: 1px solid var(--green);
     
 }
 
@@ -234,6 +252,7 @@ button {
     flex-direction: column;
     margin: 0 auto;
     width: 45%;
+    max-width: 700px;
     border: none;
     padding: 16px;
     border-radius: 4px;
@@ -254,7 +273,7 @@ button {
 
 input:focus , textarea:focus{
     outline: none;
-    border: 1px solid #64d85a;
+    border: 1px solid var(--green);
 }
 
 label {
@@ -279,14 +298,14 @@ label {
 
 #btn-add, #btn-save{
 
-    background: #64d85a;
+    background: var(--green);
     color: #f5f5f5;
 }
 
 .btn-cancel{
 
     background: none;
-    color: #64d85a;
+    color: var(--green);
 }
 
 #btn-add:hover, .btn-cancel:hover,
