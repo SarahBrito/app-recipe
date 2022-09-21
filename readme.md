@@ -1,4 +1,4 @@
-<p align="center"><img src="images/banner.gif"></p><br>
+<h1>Recipe App</h1><br>
 <p>Ideia retirada do <a href="https://github.com/florinpop17/app-ideas"  target="_blank">App ideas</a></p>
 
 
