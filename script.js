@@ -114,16 +114,16 @@ function showRecipe(recipeStorage){
         
         for (i in recipeStorage){
             
-            divRecipe += `<div class="recipe"><img class="img-recipe" src="${recipeStorage[i].img}" alt="recipe"> 
+            divRecipe += `<div class="recipe" onclick="openRecipe(${i})">
+                            <img class="img-recipe" src="${recipeStorage[i].img}" alt="recipe"> 
                             <div class="recipe-title"> ${recipeStorage[i].name} </div>
-                            <button class="btn-open" onclick="openRecipe(${i})"> Abrir </button>
                          </div>`
             
             container.innerHTML = divRecipe
         }
     }
 }
-
+//<button class="btn-open" onclick="openRecipe(${i})"> Abrir </button>
 showRecipe(recipeStorage)
 
 
@@ -193,6 +193,7 @@ function contentOpenRecipe(i){
     }
     // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     divContentRecipe += `<header class='content-header'>
+                            <img class="content-header-img" src="${recipeStorage[i].img}" alt="recipe"> 
                             <h1>${recipeStorage[i].name}</h1>
                             <button id='close-recipe' onclick='closeRecipe()'><img src='icons/fechar.png' alt=''></button>
                         </header>
@@ -200,7 +201,7 @@ function contentOpenRecipe(i){
                             <button class='btn__delete'onclick='deleteRecipe(${i})'><img src='icons/excluir.png' alt=''>Excluir</button>
                             <button class='btn__edit' onclick='editarRecipe(${i})'><img src='icons/editar.png' alt=''>Editar</button>
                         </div>
-                        <div class = 'ingredients'><h2>Ingredientes</h2><ul>${li}</ul></div>
+                        <div class='ingredients'><h2>Ingredientes</h2><ul>${li}</ul></div>
                         <div class='instructions'><h2>Modo de Preparo</h2><ol>${ol}</ol></div>`
 
     contentRecipe.innerHTML = divContentRecipe
